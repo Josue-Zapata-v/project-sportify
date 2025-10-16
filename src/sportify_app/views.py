@@ -8,3 +8,7 @@ class EquipoViewSet(viewsets.ModelViewSet):
     serializer_class = EquipoSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['nombre', 'categoria']
+    
+class JugadorViewSet(viewsets.ModelViewSet):
+    queryset = Jugador.objects.all()
+    serializer_class = JugadorSerializer
